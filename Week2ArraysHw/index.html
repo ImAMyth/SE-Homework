@@ -22,6 +22,19 @@ console.log(sum);
 let secondSum = arr.reduce((a , b) => a + b)
 console.log(secondSum)
 
+// Write a program to look for the user input in an array. When it finds the first occurrence, display the value and the index of that value.
+
+let prompt = require("prompt-sync")()
+let userInp = prompt("Choose a character from a - m : ")
+let finalUserInput = userInp.toLowerCase()
+let arr2 = ["a", "m", "b", "l", "c", "h", "d", "g", "e", "f", "g", "h", "j", "i", "j", "k", "l", "m"]
+
+for (let i = 0; i < arr2.length; i++) {
+    if (finalUserInput === arr2[i]){
+        console.log(`${finalUserInput} is at the index of ${[i]}`)
+        break;
+    }
+}
 
     </script>
 </body>
