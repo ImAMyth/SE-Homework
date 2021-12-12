@@ -7,3 +7,11 @@ function maxOfThree(num1 , num2 , num3){
     console.log(arr2);
 }
 maxOfThree(10 , 5 , 15)
+
+
+// 2a. Create a function called celsiusToFahrenheit:
+
+// - Take a Celsius temperature from the user and convert it to Fahrenheit
+
+// - Return string as output: "SOMETHING degrees Celsius is Something degrees Fahrenheit"
+
