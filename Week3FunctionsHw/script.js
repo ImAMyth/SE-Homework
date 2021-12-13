@@ -1,6 +1,6 @@
 // Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
 
-let biggestNumDisplay = document.querySelector("#biggestNum")
+let biggestNumDisplay = document.querySelector(".biggestNum")
 let num1 = Number(prompt("Choose a number : "))
 let num2 = Number(prompt("Choose another number : "))
 let num3 = Number(prompt("Choose one last number : "))
@@ -20,7 +20,7 @@ maxOfThree(num1, num2, num3)
 
 // - Return string as output: "SOMETHING degrees Celsius is Something degrees Fahrenheit"
 
-let convertToF = document.querySelector("#cToF")
+let convertToF = document.querySelector(".cToF")
 let celTemperature = prompt("Choose a degree in Celsius to convert to Fahrenheit : ")
 let fTemperature = 0
 
@@ -39,11 +39,11 @@ celsiusToFahrenheit(celTemperature)
 // - Return string as output: "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
 
 
-let convertToC = document.querySelector("#fToC")
+let convertToC = document.querySelector(".fToC")
 let fTemp = prompt("Choose a degree in Fahrenheit to convert to Celsius : ")
 let cTemp = 0
-function fahrenheitToCelsius (fTemp) {
-    cTemp = Math.round((fTemp - 32) * .5556 )
+function fahrenheitToCelsius(fTemp) {
+    cTemp = Math.round((fTemp - 32) * .5556)
     convertToC.textContent = `${fTemp} Fahrenheit is equal to ${cTemp} Celsius`
 }
 fahrenheitToCelsius(fTemp)
@@ -58,3 +58,49 @@ fahrenheitToCelsius(fTemp)
 
 
 
+let students = [{
+    firstName: "John",
+    lastName: "Johnson",
+    activity: "basketball",
+    gender: "Male"
+},
+{
+    firstName: "Nathan",
+    lastName: "Robinson",
+    activity: "swimming",
+    gender: "Male"
+},
+{
+    firstName: "Stacy",
+    lastName: "Jones",
+    activity: "swimming",
+    gender: "Female"
+},
+{
+    firstName: "Alex",
+    lastName: "Adams",
+    activity: "running",
+    gender: "Male"
+},
+{
+    firstName: "Samantha",
+    lastName: "Erickson",
+    activity: "swimming",
+    gender: "Female"
+}]
+
+let activityChoice = prompt("Choose an activity of either running , swimming or basketball : ").toLowerCase()
+let choices = document.querySelector(".choice")
+let objects =  document.querySelector(".objects")
+
+choices.textContent = ObjectsToString(filterActivity(activityChoice, students))
+objects.textContent = ObjectsToString(students)
+
+function filterActivity(activities, students) {
+    return students.filter(object => object.activity === activities)
+}
+
+function ObjectsToString(array){    
+  let allObjects = array.map(object => `${object.firstName} ${object.lastName} ${object.activity} ${object.gender}`).join(", ")
+   return allObjects
+}
