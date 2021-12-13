@@ -1,9 +1,9 @@
 // Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
 
 let biggestNumDisplay = document.querySelector("#biggestNum")
-let num1 = prompt("Choose a number : ")
-let num2 = prompt("Choose another number : ")
-let num3 = prompt("Choose one last number : ")
+let num1 = Number(prompt("Choose a number : "))
+let num2 = Number(prompt("Choose another number : "))
+let num3 = Number(prompt("Choose one last number : "))
 
 function maxOfThree(num1, num2, num3) {
     let arr = []
@@ -55,3 +55,6 @@ fahrenheitToCelsius(fTemp)
 // - Filter all those students who are into swimming
 
 // - Filter all those students who are in the activity entered by the user. For example, if the user enters "Basketball" display only students with basketball as their activity 
+
+
+
