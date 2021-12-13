@@ -110,3 +110,8 @@ function ObjectsToString(array){
 // 4. Traverse through an array (either number or string array) and display each value with their index position using Array.map method
 
 // HINT: For index, take a look at the Syntax and Parameters sections in the MDN Doc (Links to an external site.) for Array.map
+
+let  arrayDisplay = document.querySelector(".array")
+let myArr = ["hey" , "bruh", "lemme" , "get" , "a" , "dollar"]
+let result = myArr.map((value , index) => `The value is ${value} and it's index is ${index}`).join(" , ")
+arrayDisplay.textContent = result
