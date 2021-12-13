@@ -47,3 +47,11 @@ function fahrenheitToCelsius (fTemp) {
     convertToC.textContent = `${fTemp} Fahrenheit is equal to ${cTemp} Celsius`
 }
 fahrenheitToCelsius(fTemp)
+
+
+
+// 3. Create an array of at least five Student objects with the following properties: name, activity, gender
+
+// - Filter all those students who are into swimming
+
+// - Filter all those students who are in the activity entered by the user. For example, if the user enters "Basketball" display only students with basketball as their activity 
