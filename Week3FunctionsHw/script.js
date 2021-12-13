@@ -21,11 +21,29 @@ maxOfThree(num1, num2, num3)
 // - Return string as output: "SOMETHING degrees Celsius is Something degrees Fahrenheit"
 
 let convertToF = document.querySelector("#cToF")
-let celTemperature = prompt("Choose a degrees in Celsius to convert to Fahrenheit : ")
+let celTemperature = prompt("Choose a degree in Celsius to convert to Fahrenheit : ")
 let fTemperature = 0
 
 function celsiusToFahrenheit(celTemperature) {
-    fTemperature = (celTemperature * 1.8) + 32
+    fTemperature = Math.round((celTemperature * 1.8) + 32)
     convertToF.textContent = `${celTemperature} Celsius is equal to ${fTemperature} Fahrenheit`
 }
 celsiusToFahrenheit(celTemperature)
+
+
+
+// 2b. Create a function called fahrenheitToCelsius:
+
+// - Now take a Fahrenheit temperature from the user and convert it to Celsius
+
+// - Return string as output: "SOMETHING degrees Fahrenheit is SOMETHING degrees Celsius"
+
+
+let convertToC = document.querySelector("#fToC")
+let fTemp = prompt("Choose a degree in Fahrenheit to convert to Celsius : ")
+let cTemp = 0
+function fahrenheitToCelsius (fTemp) {
+    cTemp = Math.round((fTemp - 32) * .5556 )
+    convertToC.textContent = `${fTemp} Fahrenheit is equal to ${cTemp} Celsius`
+}
+fahrenheitToCelsius(fTemp)
