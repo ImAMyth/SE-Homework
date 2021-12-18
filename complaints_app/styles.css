@@ -1,0 +1,29 @@
+h2 {
+    text-align: center;
+}
+input{
+    height: 30px;
+    border-radius: 10px;
+    color: darkgray;
+}
+input:hover {
+    border-color: orange;
+}
+button{
+    color: white;
+    background-color: navy;
+    border-radius: 4px;
+    height: 30px;
+}
+button:hover{
+    background-color: orange;
+}
+#input-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
