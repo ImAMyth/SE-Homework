@@ -35,6 +35,9 @@ li{
     justify-content: center;
     margin-top: 30px;
 }
+.descriptions{
+    display: none;
+}
 .police {
     background-color: red;
     height: 25px;
